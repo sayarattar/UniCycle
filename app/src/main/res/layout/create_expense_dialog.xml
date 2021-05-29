@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<!--    <Spinner-->
+<!--        android:id="@+id/expenseEntitySpinner"-->
+<!--        android:layout_width="155dp"-->
+<!--        android:layout_height="22dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/expenseFrequencySpinner"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/expenseEntityText" />-->
+
+    <TextView
+        android:id="@+id/expenseFrequencyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding"
+        android:layout_marginTop="@dimen/padding"
+        android:text="@string/frequency"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expenseDateInput" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/expenseEntityText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/padding"-->
+<!--        android:text="@string/entity"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.428"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/expenseFrequencyText"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/expenseDateInput" />-->
+
+    <TextView
+        android:id="@+id/expenseDateInput"
+        android:layout_width="162dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="@dimen/padding"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/date"
+        android:inputType="date"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expenseNameInput" />
+
+    <EditText
+        android:id="@+id/expenseNameInput"
+        android:layout_width="160dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="@dimen/padding"
+        android:layout_marginTop="@dimen/padding"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/expenseAmountInput"
+        android:layout_width="160dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="@dimen/padding"
+        android:ems="10"
+        android:hint="@string/amount"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/expenseNameInput"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/expenseFrequencySpinner"
+        android:layout_width="155dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="@dimen/padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expenseFrequencyText" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="86dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="24dp"
+        android:background="#E57373"
+        android:text="@android:string/cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expenseFrequencySpinner" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginStart="5dp"
+        android:background="#C2F687"
+        android:onClick="saveExpense"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toEndOf="@+id/cancelButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
